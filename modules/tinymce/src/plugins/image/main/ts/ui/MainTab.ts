@@ -13,7 +13,7 @@ const makeItems = (info: ImageDialogInfo) => {
     name: 'src',
     type: 'urlinput',
     filetype: 'image',
-    label: 'Source'
+    label: 'Source URL'
   };
   const imageList = info.imageList.map((items) => ({
     name: 'images',
@@ -90,7 +90,7 @@ const makeItems = (info: ImageDialogInfo) => {
 };
 
 const makeTab = (info: ImageDialogInfo) => ({
-  title: 'General',
+  title: 'Info',
   name: 'general',
   items: makeItems(info)
 });

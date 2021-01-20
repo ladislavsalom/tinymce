@@ -340,9 +340,9 @@ const makeDialogBody = (info: ImageDialogInfo) => {
     const tabPanel: DialogType.TabPanelSpec = {
       type: 'tabpanel',
       tabs: Arr.flatten([
-        [ MainTab.makeTab(info) ],
+        info.hasUploadTab && (info.hasUploadUrl || info.hasUploadHandler) ? [ UploadTab.makeTab(info) ] : [],
         info.hasAdvTab ? [ AdvTab.makeTab(info) ] : [],
-        info.hasUploadTab && (info.hasUploadUrl || info.hasUploadHandler) ? [ UploadTab.makeTab(info) ] : []
+        [ MainTab.makeTab(info) ]
       ])
     };
     return tabPanel;
