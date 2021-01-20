@@ -58,6 +58,7 @@
       "tinymce/plugins/insertdatetime/*": ["modules/tinymce/src/plugins/insertdatetime/main/ts/*"],
       "tinymce/plugins/legacyoutput/*": ["modules/tinymce/src/plugins/legacyoutput/main/ts/*"],
       "tinymce/plugins/link/*": ["modules/tinymce/src/plugins/link/main/ts/*"],
+      "tinymce/plugins/pflink/*": ["modules/tinymce/src/plugins/pflink/main/ts/*"],
       "tinymce/plugins/lists/*": ["modules/tinymce/src/plugins/lists/main/ts/*"],
       "tinymce/plugins/media/*": ["modules/tinymce/src/plugins/media/main/ts/*"],
       "tinymce/plugins/nonbreaking/*": ["modules/tinymce/src/plugins/nonbreaking/main/ts/*"],

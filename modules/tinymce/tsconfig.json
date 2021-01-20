@@ -36,6 +36,7 @@
       "tinymce/plugins/insertdatetime/*": ["src/plugins/insertdatetime/main/ts/*"],
       "tinymce/plugins/legacyoutput/*": ["src/plugins/legacyoutput/main/ts/*"],
       "tinymce/plugins/link/*": ["src/plugins/link/main/ts/*"],
+      "tinymce/plugins/pflink/*": ["src/plugins/pflink/main/ts/*"],
       "tinymce/plugins/lists/*": ["src/plugins/lists/main/ts/*"],
       "tinymce/plugins/media/*": ["src/plugins/media/main/ts/*"],
       "tinymce/plugins/nonbreaking/*": ["src/plugins/nonbreaking/main/ts/*"],
