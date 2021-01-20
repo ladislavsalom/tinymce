@@ -21,12 +21,12 @@ const setupButtons = (editor: Editor) => {
     onSetup: Actions.toggleActiveState(editor)
   });
 
-  editor.ui.registry.addButton('openlink', {
-    icon: 'new-tab',
-    tooltip: 'Open link',
-    onAction: Actions.gotoSelectedLink(editor),
-    onSetup: Actions.toggleEnabledState(editor)
-  });
+  // editor.ui.registry.addButton('openlink', {
+  //   icon: 'new-tab',
+  //   tooltip: 'Open link',
+  //   onAction: Actions.gotoSelectedLink(editor),
+  //   onSetup: Actions.toggleEnabledState(editor)
+  // });
 
   editor.ui.registry.addButton('unlink', {
     icon: 'unlink',
@@ -37,12 +37,12 @@ const setupButtons = (editor: Editor) => {
 };
 
 const setupMenuItems = (editor: Editor) => {
-  editor.ui.registry.addMenuItem('openlink', {
-    text: 'Open link',
-    icon: 'new-tab',
-    onAction: Actions.gotoSelectedLink(editor),
-    onSetup: Actions.toggleEnabledState(editor)
-  });
+  // editor.ui.registry.addMenuItem('openlink', {
+  //   text: 'Open link',
+  //   icon: 'new-tab',
+  //   onAction: Actions.gotoSelectedLink(editor),
+  //   onSetup: Actions.toggleEnabledState(editor)
+  // });
 
   editor.ui.registry.addMenuItem('link', {
     icon: 'link',
@@ -60,7 +60,7 @@ const setupMenuItems = (editor: Editor) => {
 };
 
 const setupContextMenu = (editor: Editor) => {
-  const inLink = 'link unlink openlink';
+  const inLink = 'link unlink';
   const noLink = 'link';
   editor.ui.registry.addContextMenu('link', {
     update: (element) => Utils.hasLinks(editor.dom.getParents(element, 'a') as HTMLAnchorElement[]) ? inLink : noLink

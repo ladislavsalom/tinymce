@@ -14,10 +14,10 @@ import * as Utils from '../core/Utils';
 import { LinkDialogInfo } from './DialogTypes';
 import { AnchorListOptions } from './sections/AnchorListOptions';
 import { ClassListOptions } from './sections/ClassListOptions';
-//import { LinkListOptions } from './sections/LinkListOptions';
-import { ToursListOptions } from './sections/ToursListOptions';
+// import { LinkListOptions } from './sections/LinkListOptions';
 import { RelOptions } from './sections/RelOptions';
 import { TargetOptions } from './sections/TargetOptions';
+import { ToursListOptions } from './sections/ToursListOptions';
 
 const nonEmptyAttr = (dom: DOMUtils, elem: string | Element, name: string): Optional<string> => {
   const val: string | null = dom.getAttrib(elem, name);
@@ -57,7 +57,7 @@ const collect = (editor: Editor, linkNode: HTMLAnchorElement): Promise<LinkDialo
       classes: ClassListOptions.getClasses(editor),
       anchor: AnchorListOptions.getAnchors(editor),
       link: Optional.none(),
-      tours: tours
+      tours
     },
     optNode: Optional.from(linkNode),
     flags: {

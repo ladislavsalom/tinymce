@@ -106,14 +106,14 @@ const makeDialog = (settings: LinkDialogInfo, onSubmit, editor: Editor): Dialog.
       title: 'URL',
       items: Arr.flatten<Dialog.BodyComponentSpec>([
         urlInput,
-        //toursSelector,
-        //displayText,
-        //titleText,
+        // toursSelector,
+        // displayText,
+        // titleText,
         Optionals.cat([
           // catalogs.anchor.map(ListOptions.createUi('anchor', 'Anchors')),
           // catalogs.rels.map(ListOptions.createUi('rel', 'Rel')),
           catalogs.targets.map(ListOptions.createUi('target', 'Open link in...')),
-          //catalogs.link.map(ListOptions.createUi('link', 'Link list')),
+          // catalogs.link.map(ListOptions.createUi('link', 'Link list')),
           catalogs.classes.map(ListOptions.createUi('linkClass', 'Display Type'))
         ])
       ])
@@ -163,7 +163,11 @@ const open = (editor: Editor) => {
     const onSubmit = handleSubmit(editor, info);
     return makeDialog(info, onSubmit, editor);
   }).then((spec) => {
-    editor.windowManager.open(spec);
+    const dialog = editor.windowManager.open(spec);
+
+    if (spec.initialData?.tourId) {
+      dialog.showTab('Tour');
+    }
   });
 };
 

@@ -42,7 +42,7 @@ const getHref = (elm: Element): string => {
 };
 
 const applyRelTargetRules = (rel: string, isUnsafe: boolean): string => {
-  const rules = ['noopener'];
+  const rules = [ 'noopener' ];
   const rels = rel ? rel.split(/\s+/) : [];
 
   const toString = (rels: string[]): string => Tools.trim(rels.sort().join(' '));
@@ -91,11 +91,10 @@ const isOnlyTextSelected = (editor: Editor) => {
 
 const isImageFigure = (elm: Element) => elm && elm.nodeName === 'FIGURE' && /\bimage\b/i.test(elm.className);
 
-const getLinkAttrs = (data: LinkDialogOutput): Record<string, string> => Arr.foldl(['title', 'rel', 'class', 'target', 'tourId'], (acc, key) => {
-  console.log('ASFAS', acc, data, key);
+const getLinkAttrs = (data: LinkDialogOutput): Record<string, string> => Arr.foldl([ 'title', 'rel', 'class', 'target', 'tourId' ], (acc, key) => {
   data[key].each((value) => {
     // If dealing with an empty string, then treat that as being null so the attribute is removed
-    if (key == 'tourId') {
+    if (key === 'tourId') {
       acc['data-pfbind-start-tour'] = value.length > 0 ? value : null;
     } else {
       acc[key] = value.length > 0 ? value : null;
